@@ -1,0 +1,104 @@
+.product-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.product-modal { 
+  max-width: 480px;
+  height: auto;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Apila el contenido verticalmente */
+  align-items: center;
+}
+.product-modal .product-modal-body {
+  flex-grow: 1; /* Permite que el contenido crezca para hacer espacio */
+}
+
+.product-modal-img{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 4rem 0 2rem;
+}
+
+.product-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333
+}
+
+.product-modal-description{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 14px;
+  font-style: italic;
+  color: #333
+}
+
+.product-modal-amount-container {
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-modal-amount {
+  display: flex;
+  gap: 10px;
+}
+
+.product-modal-amount input {
+  width: 15px;
+}
+.product-modal-amount-decrement {
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.product-modal-price {
+  color: #007bff;
+}
+
+.product-modal-close-btn{
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  top: 5px;
+  right: 10px;
+  color: #333;
+  position: absolute;
+}
+
+
+.product-modal-buy-btn{
+  background-color: #ebebf2;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin-top: auto;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.product-modal-buy-btn:hover,
+.product-modal-buy-btn:focus{
+  background-color: #9393B2;
+  color: #ffff;
+}

@@ -1,0 +1,53 @@
+button {
+  all: unset;
+
+}
+
+.categories-title {
+  font-size: 50px;
+}
+.btn-category {
+  padding: 20px 30px;         /* Padding similar al botón */
+  margin: 5px;
+  font-weight: bold;
+  background-color: #333;
+  text-transform: capitalize;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;      /* Quitar el subrayado */
+  display: inline-block;      /* Para que se comporte como botón */
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.btn-category:hover {
+  background-color: #555;     /* Efecto hover */
+}
+
+.categories-list {
+  display: flex;
+  justify-content: center;    /* Centrar botones */
+  gap: 10px;                  /* Espacio entre botones */
+}
+
+.category-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+  .categories-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .categories-list button {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    margin: auto;
+  }
+}
+
