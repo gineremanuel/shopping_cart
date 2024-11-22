@@ -5,10 +5,10 @@ const Stars = ({rate, rating}) => {
   return (
     <> 
       <p className="product-card-rating">
-        {Array.from({ length :rate}, () => (
-          <Star className="stars" />
+        {Array.from({ length :rate}, (_, index) => (
+          <Star className="stars" key={`star-${index}`} />
         ))}
-        {decimal > 0.4 ? (<StarHalf className="stars"/>) : null}
+        {decimal > 0.4 ? (<StarHalf className="stars" key="star-half"/>) : null}
       {rate}({rating})</p>
     </>
   )
