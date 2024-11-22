@@ -32,9 +32,9 @@ const Cart = () => {
                 Qty: {product.quantity}
               </small>
               <small>
-                SubTotal: $ {product.totalPrice}
+                SubTotal: $ {(product.totalPrice).toFixed(2)}
               </small>
-              <button onClick={() => removeFromCart(product.id)}>Remove</button>
+              <button onClick={() => removeFromCart(product)}>Remove</button>
             </footer>
           </li>  
           ))|| <p>No items in the cart</p>}
