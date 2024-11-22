@@ -2,21 +2,26 @@ import "../styles/ProductCard.css";
 import Stars from "../components/Stars";
 import { useState } from "react";
 import ProductModal from "./ProductModal";
+import { useCart } from "../hooks/useCart";
 
-const ProductCard = ({title, description, rating, price, img}) => {
+const ProductCard = ({product}) => {
   const [showModal, setShowModal] = useState(false);
+  const {amount, setAmount} = useCart();
 
-  const handleClose = () => {setShowModal(false)}
+  const handleClose = () => {
+    setShowModal(false)
+    setAmount(1)
+  }
 
   return (
     <>
       <div className="product-card">
-        <img src={img} alt="" className="product-card-image"/>
+        <img src={product.image} alt="" className="product-card-image"/>
         <div className="product-card-content">
-          <h3 className="product-card-title">{title}</h3>
+          <h3 className="product-card-title">{product.title}</h3>
         
-          <Stars rate={rating.rate} rating={rating.count}/>
-          <h4 className="product-card-price">${price}</h4>
+          <Stars rate={product.rating.rate} rating={product.rating.count}/>
+          <h4 className="product-card-price">${product.price}</h4>
           <button 
             className="product-card-btn"
             onClick={() => setShowModal(true)} >Buy</button>
@@ -24,11 +29,7 @@ const ProductCard = ({title, description, rating, price, img}) => {
       </div>
       {showModal && 
         <ProductModal 
-          title={title}
-          description={description}
-          rating={rating} 
-          price={price} 
-          img ={img}
+          product= {product}
           handleClose={handleClose}/>
         }
     </>

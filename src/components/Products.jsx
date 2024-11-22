@@ -14,16 +14,11 @@ const Products = ({category}) => {
         {products.map(product => (
           <ProductCard
             key = {product.id}
-            title={product.title}
-            description={product.description}
-            img={product.image}
-            rating= {product.rating}
-            price= {product.price} 
+            product= {product}
           />
         ))}
       </div>  
     </>
-      
   )
 }
 
