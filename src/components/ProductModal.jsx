@@ -5,9 +5,6 @@ import { CartContext } from "../contexts/CartContext.jsx";
 import {useCart} from "../hooks/useCart.js";
 
 const ProductModal = ({product, handleClose}) => {
-
-
-  
   const {addToCart, handleDecrement, handleIncrement, amount, setAmount} = useCart();
      
   const handleChange = (e) => {
@@ -36,7 +33,7 @@ const ProductModal = ({product, handleClose}) => {
             <p className="product-modal-price">${(product.price * amount).toFixed(2)}</p>
           </div>
         </div>
-        <button className="product-modal-buy-btn" onClick={() => addToCart(product, amount)}>Add to cart</button>
+        <button className="product-modal-buy-btn" onClick={() => addToCart(product, amount, handleClose)}>Add to cart</button>
       </div>
     </div>
   )
