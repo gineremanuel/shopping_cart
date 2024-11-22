@@ -1,62 +1,45 @@
 import Stars from "./Stars";
 import "../styles/ProductModal.css";
-import { useState } from "react";
-const ProductModal = ({title, description, rating, price, img, handleClose}) => {
-  const [amount, setAmount] = useState(1);
-  const [totalProductPrice, setTotalProductPrice] = useState(price)
-    
+import { useContext, useState } from "react";
+import { CartContext } from "../contexts/CartContext.jsx";
+import {useCart} from "../hooks/useCart.js";
+
+const ProductModal = ({product, handleClose}) => {
+
+
+  
+  const {addToCart, handleDecrement, handleIncrement, amount, setAmount} = useCart();
+     
   const handleChange = (e) => {
-    const units = e.target.value
+    const units = Number(e.target.value);
     setAmount(units)
-    handlePricing(units)
-  }
-  const handlePricing = (units) => {
-    const totalPrice = units * price
-    setTotalProductPrice(totalPrice)
-  }
-  const handleDecrementClick = () => {
-    if(amount > 1) {
-      let units = amount
-      units --
-      setAmount(units)
-      handlePricing(units)
-    }
-  }
-  const handleIncrementClick = () => {
-    if(amount < 10) {
-      let units = amount
-      units ++
-      setAmount(units)
-      handlePricing(units)
-    }
   }
    return (
     <div className="product-modal-backdrop">
       <div className="product-modal">
       <button className="product-modal-close-btn" onClick={() => handleClose()}>x</button>
-        <img className="product-modal-img" src={img} alt="product image" />
+        <img className="product-modal-img" src={product.image} alt="product image" />
         <div className="product-modal-body">
-          <div className="product-modal-title">{title}</div>
-          <div className="product-modal-description">{description}</div>
-          <Stars rate={rating.rate} rating={rating.count}/>
+          <div className="product-modal-title">{product.title}</div>
+          <div className="product-modal-description">{product.description}</div>
+          <Stars rate={product.rating.rate} rating={product.rating.count}/>
           <div className="product-modal-amount-container">
-            <p className="product-modal-amount">Cantidad: 
+            <p className="product-modal-amount">Amount: 
               <button className="product-modal-amount-decrement"
-               onClick={handleDecrementClick}>-</button>
+               onClick={handleDecrement}>-</button>
               <input type="number" 
                 value={amount}
                 onChange={handleChange}/>
               <button className="product-modal-amount-increcrement"
-                onClick={handleIncrementClick}>+</button>  
+                onClick={handleIncrement}>+</button>  
             </p>
-            <p className="product-modal-price">${totalProductPrice}</p>
+            <p className="product-modal-price">${(product.price * amount).toFixed(2)}</p>
           </div>
         </div>
-        <button className="product-modal-buy-btn" onClick={() => handleClose()}>Add to cart</button>
+        <button className="product-modal-buy-btn" onClick={() => addToCart(product, amount)}>Add to cart</button>
       </div>
     </div>
   )
-
 }
 
 export default ProductModal;
