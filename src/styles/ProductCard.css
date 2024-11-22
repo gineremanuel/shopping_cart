@@ -25,7 +25,7 @@
 }
 
 .product-card:hover {
-  transform: translateY(-5px); /* Pequeña animación al hacer hover */
+  transform: translateY(-5px);
 }
 
 .product-card-image {

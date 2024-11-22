@@ -7,7 +7,7 @@ button {
   font-size: 50px;
 }
 .btn-category {
-  padding: 20px 30px;         /* Padding similar al botón */
+  padding: 20px 30px;         
   margin: 5px;
   font-weight: bold;
   background-color: #333;
@@ -16,20 +16,20 @@ button {
   border: none;
   border-radius: 5px;
   text-align: center;
-  text-decoration: none;      /* Quitar el subrayado */
-  display: inline-block;      /* Para que se comporte como botón */
+  text-decoration: none;      
+  display: inline-block;      
   cursor: pointer;
   font-size: 25px;
 }
 
 .btn-category:hover {
-  background-color: #555;     /* Efecto hover */
+  background-color: #555;     
 }
 
 .categories-list {
   display: flex;
-  justify-content: center;    /* Centrar botones */
-  gap: 10px;                  /* Espacio entre botones */
+  justify-content: center;   
+  gap: 10px;                 
 }
 
 .category-title {
@@ -38,7 +38,6 @@ button {
   text-transform: capitalize;
 }
 
-/* Adaptación para pantallas pequeñas */
 @media (max-width: 600px) {
   .categories-list {
     flex-direction: column;
@@ -46,7 +45,7 @@ button {
   }
 
   .categories-list button {
-    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    width: 100%;
     margin: auto;
   }
 }
