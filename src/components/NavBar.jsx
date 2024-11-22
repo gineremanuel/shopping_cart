@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../styles/NavBar.css";
 import { ShoppingCart } from 'lucide-react';
+import Cart from "./Cart";
 
 const NavBar = () => {
   return (
@@ -19,8 +20,9 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/carrito"><ShoppingCart /></NavLink>
+          <Cart />
         </li>
+
       </ul>
     </>
   )

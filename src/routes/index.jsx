@@ -1,8 +1,9 @@
 import App from "../App";
-import Shopping from "../pages/ShoppingPage";
+import ShoppingPage from "../pages/ShoppingPage";
 import ErrorPage from "../pages/ErrorPage";
 import NavBar from "../components/NavBar";
-import Products from "../pages/ProductsPage";
+import ProductsPage from "../pages/ProductsPage";
+import ShoppingCartPage from "../pages/ShoppingCartPage";
 
 
 const routes = [
@@ -21,7 +22,7 @@ const routes = [
     element: (
       <>
         <NavBar />
-        <Shopping />
+        <ShoppingPage />
       </>
     )
   },
@@ -29,10 +30,19 @@ const routes = [
     path: "shopping/:category",
     element: (
       <>
-        <Products />
+        <ProductsPage />
       </>
     )
   },
+  // {
+  //   path: "cart",
+  //   element: (
+  //     <>
+  //       <NavBar />
+  //       <ShoppingCartPage />
+  //     </>
+  //   )
+  // }
 ];
 
 

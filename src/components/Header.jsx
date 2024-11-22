@@ -1,5 +1,3 @@
-import Categories from "./Categories";
-
 const Header = () => {
   return (
     <>
