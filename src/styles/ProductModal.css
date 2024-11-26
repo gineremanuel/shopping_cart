@@ -44,10 +44,20 @@
   color: #333
 }
 
+.product-modal-amount-increcrement {
+  cursor: pointer;;
+}
+
+.product-modal-amount-decrement {
+  cursor: pointer;;
+}
+
+
 .product-modal-amount-container {
   color: #333;
   display: flex;
   justify-content: space-around;
+  margin: 10px 0px;
 }
 
 .product-modal-amount {
@@ -56,7 +66,7 @@
 }
 
 .product-modal-amount input {
-  width: 15px;
+  width: 10%;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -81,21 +91,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .product-modal-buy-btn{
-  background-color: #ebebf2;
-  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #333;
   cursor: pointer;
-  font-size: 16px;
-  padding: 12px 20px;
-  margin-top: auto;
-  outline: none;
+  font-weight: bold;
   border: none;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #333;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .product-modal-buy-btn:hover,
 .product-modal-buy-btn:focus{
-  background-color: #9393B2;
-  color: #ffff;
+  background-color: #555;  
 }

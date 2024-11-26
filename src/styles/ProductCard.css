@@ -58,16 +58,27 @@
 
 .product-card-rating {
   font-size: 16px;
+  display: flex;
+  align-items: center;
   font-weight: bold;
+  justify-content: center;
   color: #ffc107;
   margin: 5px 0;
 }
 
 .product-card-btn {
-  color: #ddd;
+  color: #fff;
   padding: 10px 20px;
   background-color: #333;
-  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product-card-btn:hover {
+  background-color: #555;  
 }
 
 .stars {
