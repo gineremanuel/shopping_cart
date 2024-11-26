@@ -61,14 +61,12 @@ const CartProvider = ({children}) => {
 
   const handleDecrement = () => {
     if (amount > 1) {
-      setAmount(amount - 1);
+      setAmount(prevState => prevState - 1);
     }
   };
 
   const handleIncrement = () => {
-    if (amount < 10) {
-      setAmount(amount + 1);
-    }
+    setAmount(prevState => prevState + 1);
   };
 
   return (

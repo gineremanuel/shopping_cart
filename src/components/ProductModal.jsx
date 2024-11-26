@@ -1,7 +1,5 @@
 import Stars from "./Stars";
 import "../styles/ProductModal.css";
-import { useContext, useState } from "react";
-import { CartContext } from "../contexts/CartContext.jsx";
 import {useCart} from "../hooks/useCart.js";
 
 const ProductModal = ({product, handleClose}) => {
@@ -24,7 +22,7 @@ const ProductModal = ({product, handleClose}) => {
             <p className="product-modal-amount">Amount: 
               <button className="product-modal-amount-decrement"
                onClick={handleDecrement}>-</button>
-              <input type="number" 
+              <input type="number"
                 value={amount}
                 onChange={handleChange}/>
               <button className="product-modal-amount-increcrement"
