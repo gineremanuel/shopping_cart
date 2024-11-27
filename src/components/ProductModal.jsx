@@ -12,7 +12,7 @@ const ProductModal = ({product, handleClose}) => {
    return (
     <div className="product-modal-backdrop">
       <div className="product-modal">
-      <button className="product-modal-close-btn" onClick={() => handleClose()}>x</button>
+      <button className="product-modal-close-btn" onClick={handleClose}>x</button>
         <img className="product-modal-img" src={product.image} alt="product image" />
         <div className="product-modal-body">
           <div className="product-modal-title">{product.title}</div>

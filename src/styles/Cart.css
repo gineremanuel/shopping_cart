@@ -12,10 +12,9 @@
 
 .cart-item-container {
   background-color: #b3b3b3;
-  padding: 12px;
+  padding: 5px;
   border-radius: 12px;
   margin-bottom: 10px;
-  justify-content: space-between;
 }
 
 .cart-item-container img {
@@ -35,7 +34,7 @@
 
 
 .cart-item-info {
-  flex: 1; /* Se expande para ocupar el espacio restante */
+  flex: 1;
   margin-right: 10px;
   display: flex;
   flex-direction: column;
@@ -69,11 +68,8 @@
 .cart-item-remove-btn {
   color: #000;
   font-size: 12px;
-  padding: 8px;
-  border-radius: 50%;
+  padding: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px; 
 }
 
 .checkout-button {
