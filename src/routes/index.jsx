@@ -3,7 +3,6 @@ import ShoppingPage from "../pages/ShoppingPage";
 import ErrorPage from "../pages/ErrorPage";
 import NavBar from "../components/NavBar";
 import ProductsPage from "../pages/ProductsPage";
-import ShoppingCartPage from "../pages/ShoppingCartPage";
 
 
 const routes = [
@@ -34,15 +33,6 @@ const routes = [
       </>
     )
   },
-  // {
-  //   path: "cart",
-  //   element: (
-  //     <>
-  //       <NavBar />
-  //       <ShoppingCartPage />
-  //     </>
-  //   )
-  // }
 ];
 
 
