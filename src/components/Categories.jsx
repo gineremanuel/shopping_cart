@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useCategories from "../hooks/useCategories.js";
 import "../styles/Categories.css";
 

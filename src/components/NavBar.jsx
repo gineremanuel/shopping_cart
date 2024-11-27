@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import "../styles/NavBar.css";
-import { ShoppingCart } from 'lucide-react';
 import Cart from "./Cart";
 
 const NavBar = () => {
